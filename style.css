@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #462a68;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 400px;
+  padding: 25px 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7c47bb;
+  border-radius: 10px;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.container input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 0 20px;
+  margin: 10px 0 20px;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  background: #462a68;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #ffffff1f;
+}
+
+#qrBox {
+  width: 200px;
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in;
+}
+
+#qrBox img {
+  width: 100%;
+  padding: 10px;
+}
+
+#qrBox.show-img {
+  max-height: 300px;
+  margin: 10px auto;
+  border: 1px solid #3e0085;
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#inputBox.error {
+  border: 2px solid rgb(209, 4, 4);
+}
